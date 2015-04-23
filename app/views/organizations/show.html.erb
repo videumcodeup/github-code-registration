@@ -1,0 +1,22 @@
+<div id="header">
+  <div class="container">
+    <div id="organization-header">
+      <h1><%= @organization.name %></h1>
+      <p><%= @organization.description %></p>
+      <a href="<%= @organization.html_url %>"><%= @organization.html_url.gsub(/https?:\/\//, '') %></a>
+    </div>
+  </div>
+</div>
+<div id="content">
+  <div class="container">
+    <div id="organization-content">
+      <div id="members">
+        <% @organization.members.each do |member| %>
+          <a class="member" href="<%= member.html_url %>">
+            <img title="<%= member.login %>" src="<%= member.avatar_url %>" width="100" height="100">
+          </a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

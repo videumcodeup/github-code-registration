@@ -1,0 +1,10 @@
+#organization-header {
+  padding: 20px 0;
+}
+
+#organization-content a.member {
+  text-decoration: none;
+}
+#organization-content a.member img {
+  border-radius: 3px;
+}
